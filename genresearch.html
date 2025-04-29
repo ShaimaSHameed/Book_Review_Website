@@ -1,0 +1,133 @@
+<!-- Shathah Saleem -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+</head>
+
+<body>
+
+     <!-- HEADER -->
+     <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <div class="logo">On.Book</div>
+            </div>
+
+            <div class="hamburger" onclick="toggleMobileMenu()">&#9776;</div>
+
+            <ul class="nav-links">
+                <li><a href='Home.html'>Home</a></li>
+                <li><a href="genresearch.html">Book Search</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="library.html">Wishlist</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+
+            <button id="dark-mode-toggle">🌙</button>                    
+
+            <div class="right-section">
+                <!-- <div class="search-bar">
+                    <input id="searchbar" type="text" placeholder="Search for books...">
+                    <button>🔍</button>
+                </div> -->
+                <div class="auth">
+                    <button class="auth-btn" onclick="location.href='signin.html'">Sign In</button>
+                    <button class="auth-btn" onclick="location.href='login.html'">Login</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <div class="innerbook">
+<h1 class="booksearch">Book Search</h1>
+<div class="search">
+<input type="text" id="searchbar" placeholder="Search for books...">
+<button id="openfilters"><b>Filter</b></button>
+</div>
+</div>
+
+<div id='filtersidebar'class="sidebar">
+    <h3>Filters</h3>
+
+    <div class="filteroptions">
+        <label><input type='checkbox' value="romance">Romance</label><br>
+        <label><input type='checkbox' value="sci-fi">Sci-Fi</label><br>
+        <label><input type='checkbox' value="drama">Drama</label><br>
+        <label><input type='checkbox' value="nonfiction">Nonfiction</label><br>
+        <label><input type='checkbox' value="children">Children's Fiction</label><br>
+        <label><input type='checkbox' value="horror">Horror</label><br>
+        <label><input type='checkbox' value="thriller">Thriller</label><br>
+        <label><input type='checkbox' value="fantasy">Fantasy</label><br>
+        <label><input type='checkbox' value="action">Action</label>
+        
+    </div>
+    <br>
+    <button id="closefilters">Close</button>
+</div>
+
+
+<div id="bookresults" class="bookresults"></div>
+
+
+ <!-- FOOTER -->
+ <footer>
+    <div class="footer_main">
+        <div class="tag">
+            <img src="image/logo.png" alt="Logo">
+            <p>About Us</p>
+        </div>
+
+        <div class="tag">
+            <h1>Quick Link</h1>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Featured</a>
+            <a href="#">Arrivals</a>
+            <a href="#">Reviews</a>
+            <a href="#">Blog</a>
+        </div>
+
+        <div class="tag">
+            <h1>Contact Info</h1>
+            <a href="#"><i class="fa-solid fa-phone"></i> +971 50 123 4567</a>
+            <a href="#"><i class="fa-solid fa-phone"></i> +971 55 789 1234</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i> bookstore123@gmail.com</a>
+        </div>
+
+        <div class="tag">
+            <h1>Follow Us</h1>
+            <div class="social_link">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+
+        <div class="tag">
+            <h1>Newsletter</h1>
+            <div class="search_bar">
+                <input type="text" placeholder="Your email address here">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <p class="end">Design By <span>Shaima, Latifa, Shatha, Anam</span></p>
+</footer>
+
+
+<script src="sidebar.js"></script>
+<script src="titles.js"></script>
+</body>
+
+</html>

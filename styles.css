@@ -829,6 +829,141 @@ body {
   background-color: #f4511e;
 }
 
+/* Genre Search CSS*/
+/*Shathah Saleem */
+
+.innerbook{
+  margin:0 70px;
+  padding-top: 10px;
+  margin-bottom: 70px;
+}
+
+.search{
+  display: flex;
+  justify-content: center;
+  
+}
+
+#searchbar{
+  width: 740px; 
+  height: 50px;
+  padding: 9px;
+  border: 2px solid #ccc3bc;
+  border-radius: 15px;
+  font-size: 35px;
+  
+  
+}
+
+
+nav a{
+  font-size: 30px;
+  margin-right:40px;
+}
+
+#openfilters{ /*'Filter' button */
+  padding: 13px;
+  background-color: #bcaa9c;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+h1{
+  font-size: 100px;
+  text-align: center;
+}
+
+.sidebar{
+  background-image: url(img/bookmark.jpeg); /*maybe i will darken it */
+  position: fixed;
+  color:white;
+  right:-410px;
+  transition:right 0.5s ease-in-out;
+  padding:40px;
+  height:100%;
+  top:0; /*be placed at the very top */
+  z-index: 1000;
+  box-shadow: -3px 0px 7px #423b36;
+  font-size: 30px;
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /*just below the sidebar*/
+  display: none;
+}
+
+/* learned from https://stackoverflow.com/questions/4137255/checkboxes-in-web-pages-how-to-make-them-bigger*/
+input[type='checkbox']
+{
+width:20px;
+margin-bottom:15px;
+height:20px;
+}
+
+#closefilters{
+  font-size: 30px;
+}
+
+/*learned from https://www.youtube.com/watch?v=SgmNxE9lWcY */
+/*and https://www.w3schools.com/jsref/met_win_setinterval.asp */
+@keyframes bounce{
+0%,100%{
+  transform:translateY(0)
+}
+
+60%{
+  transform:translateY(40px)
+}
+
+}
+
+.booksearch{
+  animation: bounce 6s ease infinite;
+  margin-bottom:70px;
+  margin-top:60px;
+}
+
+.bookresults{
+  display:flex;
+  flex-wrap: wrap;
+  gap:30px;
+  justify-content: center;
+  padding:20px;
+  margin: 0 auto;
+  /* max-width: 1200px; */
+
+}
+
+.bookresults .book{
+ background-color: white;
+ border-radius: 10px;
+ padding:20px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ transition: all 0.4s ease;
+ text-align: center;
+ height: 300px;
+ width:200px;
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+.bookresults .book:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
 /* Scorecard */
 .score-card, .leaderboard-message, .leaderboard-score {
   font-size: 20px;
