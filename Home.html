@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="On.Book - Discover trending books, take quizzes, and enjoy book reviews. Find your next read today!">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>On.Book</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script src="quiz.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+          <!-- Left Side -->
+          <div class="nav-left">
+            <div class="logo">On.Book</div>
+            <ul class="nav-links">
+              <li><a href="#">Book Search</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Leaderboard</a></li>
+              <li><a href="#">Wishlist</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </div>
+      
+          <!-- Right Side -->
+          <div class="nav-right">
+            <!-- Dark Mode Toggle -->
+            <button id="dark-mode-toggle">🌙</button>
+      
+            <!-- Search Bar -->
+            <div class="search-bar">
+              <input type="text" placeholder="Search for books..." />
+              <button><i class="fas fa-search"></i></button>
+            </div>
+      
+            <!-- Account Dropdown -->
+            <div class="auth-dropdown">
+              <div class="dropdown-btn" onclick="toggleAuthDropdown()">
+                <i class="fas fa-user-circle"></i> Account <i class="fas fa-caret-down"></i>
+              </div>
+              <div class="dropdown-content" id="authDropdown">
+                <a href="signin.html">Sign In</a>
+                <a href="login.html">Login</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>         
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Find Your Next Book</h1>
+            <p>Find the perfect book for your current vibe — cozy, thrilling, or thought-provoking. Your next favourite read is just a click away.</p>
+            <button class="button-explore" onclick="scrollToBooks()">Explore Now</button>
+        </div>
+
+        <div class="book-images">
+            <div class="book">
+                <img src="danbrown.jpg" alt="The Da Vinci Code">
+                <h3>The Da Vinci Code</h3>
+                <p>Dan Brown</p>
+            </div>
+
+            <div class="book">
+                <img src="harrypotter.jpg" alt="Harry Potter and the Prisoner of Azkaban">
+                <h3>Harry Potter and the Prisoner of Azkaban</h3>
+                <p>J.K. Rowling</p>
+            </div>
+
+            <div class="book">
+                <img src="surroundedbyidiots.jpg" alt="Surrounded by Idiots">
+                <h3>Surrounded by Idiots</h3>
+                <p>Thomas Erikson</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRENDING BOOKS SECTION -->
+    <section class="trending">
+        <h2>Trending Books</h2>
+        <div class="trending-books">
+            <!-- Each book -->
+            <div class="book">
+                <div class="container">
+                    <img src="T1.jpg" alt="It Ends with Us" class="image">
+                </div>
+                <h3>It Ends with Us</h3>
+                <p>Colleen Hoover</p>
+            </div>
+
+            <div class="book">
+                <div class="container">
+                    <img src="T2.jpeg" alt="The Housemaid" class="image">
+                </div>
+                <h3>The Housemaid</h3>
+                <p>Nina Winchester</p>
+            </div>
+
+            <div class="book">
+                <div class="container">
+                    <img src="T3.jpeg" alt="The Seven Husbands of Evelyn Hugo" class="image">
+                </div>
+                <h3>The Seven Husbands of Evelyn Hugo</h3>
+                <p>Taylor Jenkins Reid</p>
+            </div>
+
+            <div class="book">
+                <div class="container">
+                    <img src="T4.jpeg" alt="Onyx Storm" class="image">
+                </div>
+                <h3>Onyx Storm</h3>
+                <p>Rebecca Yarros</p>
+            </div>
+
+            <div class="book">
+                <div class="container">
+                    <img src="T5.jpeg" alt="Quicksilver" class="image">
+                </div>
+                <h3>Quicksilver</h3>
+                <p>Callie Hart</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENTLY VIEWED SECTION -->
+    <section class="recently-viewed">
+        <h2>Recently Viewed</h2>
+        <div class="recently-viewed-books">
+            <div class="book">
+                <div class="container">
+                    <img src="R1.jpeg" alt="HTML & CSS" class="image">
+                </div>
+                <h3>HTML & CSS</h3>
+                <p>Jon Duckett</p>
+            </div>
+
+            <div class="book">
+                <div class="container">
+                    <img src="R3.jpg" alt="Rich Dad Poor Dad" class="image">
+                </div>
+                <h3>Rich Dad Poor Dad</h3>
+                <p>Robert T. Kiyosaki</p>
+            </div>
+
+            <div class="book">
+                <div class="container">
+                    <img src="R2.jpeg" alt="Data Structures and Algorithms" class="image">
+                </div>
+                <h3>Data Structures & Algorithms in Java</h3>
+                <p>Goodrich | Tamassia | Goldwasser</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="reviews">
+      <h1>What Our Readers Say</h1>
+      <div class="review_box">
+        <div class="review_card">
+          <div class="card_top">
+            <img src="P1.jpeg" alt="Reviewer 1">
+            <div class="reviewer_info">
+              <h2>Jhonny Deep</h2>
+              <div class="review_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>"Absolutely loved the experience! The book recommendations were spot on. I found my new favourite author here."</p>
+        </div>
+  
+      <div class="review_card">
+        <div class="card_top">
+          <img src="P2.jpeg" alt="Reviewer 2">
+          <div class="reviewer_info">
+            <h2>Shahrukh Khan</h2>
+            <div class="review_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+        </div>
+        <p>"Beautifully designed website! So easy to navigate and the trending section always keeps me updated."</p>
+      </div>
+  
+      <div class="review_card">
+        <div class="card_top">
+          <img src="P3.jpg" alt="Reviewer 3">
+          <div class="reviewer_info">
+            <h2>Tom Cruise</h2>
+            <div class="review_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <p>"I really appreciate the recently viewed feature. Helps me go back to books I forgot about. Lovely touch!"</p>
+      </div>
+  
+      <div class="review_card">
+        <div class="card_top">
+          <img src="P4.jpg" alt="Reviewer 4">
+          <div class="reviewer_info">
+            <h2>Chris Martin</h2>
+            <div class="review_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+          </div>
+        </div>
+        <p>"Great collection and very well-organised! I found exactly what I was looking for without any hassle. Highly recommended."</p>
+      </div>
+      </div>
+  </section>
+
+  <!-- QUIZ SELECTION SECTION -->
+    <section class="quiz-selection-section" id="quiz-selection-container">
+        <div class="quiz-box">
+            <div class="quiz-header">
+                <h1>🧠 Choose Your Quiz</h1>
+                <p>Select a quiz category to begin</p>
+            </div>
+            <div class="options">
+                <button id="author-quiz" class="option-btn">Author Quiz</button>
+                <button id="general-gk" class="option-btn">General Knowledge Quiz</button>
+                <button id="book-quiz" class="option-btn">Book Quiz</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section class="quiz-section" id="quiz-container" style="display: none;">
+        <div class="quiz-box">
+            <div class="quiz-header">
+                <h1>🧠 Ultimate Quiz</h1>
+                <p id="progress">Question 1 of 3</p> 
+            </div>
+            <div id="quiz">
+                <h2 id="question">Question text</h2>
+                <div id="options" class="options"></div>
+            </div>
+            <button id="next-btn" class="btn" style="display: none;">Next Question ➡️</button>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="leaderboard-section" id="leaderboard-container" style="display: none;">
+      <div class="quiz-box">
+          <h1>🏆 Congratulations!</h1>
+          <p class="leaderboard-message">You have completed the quiz.</p>
+          <p class="leaderboard-score">Your Final Score: <span id="score"></span> Points</p>
+          <div class="leaderboard-rankings">
+              <h3>Leaderboard</h3>
+              <ul>
+                  <li>🥇 You - <span id="final-score"></span> Points</li>
+                  <li>🥈 Alex - 20 Points</li>
+                  <li>🥉 Sam - 10 Points</li>
+              </ul>
+          </div>
+          <button id="restart-btn" class="btn">🔁 Play Again</button>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <h2>Book Quotes</h2>
+      <div class="quote-carousel">
+          <div class="quote active">
+              <p>"It is only with the heart that one can see rightly; what is essential is invisible to the eye."</p>
+              <p>- Antoine de Saint-Exupéry</p>
+          </div>
+          <div class="quote">
+            <p>"So many books, so little time."</p>
+            <p>- Frank Zappa</p>
+        </div>
+        <div class="quote">
+            <p>"The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid."</p>
+            <p>- Jane Austen, <em>Pride and Prejudice</em></p>
+        </div>
+        <div class="quote">
+            <p>"We are all in the gutter, but some of us are looking at the stars."</p>
+            <p>- Oscar Wilde, <em>Lady Windermere's Fan</em></p>
+        </div>
+        <div class="quote">
+            <p>"There is no friend as loyal as a book."</p>
+            <p>- Ernest Hemingway</p>
+        </div>
+      </div>
+      <button id="prev-btn" class="carousel-btn">❮</button>
+      <button id="next-btn" class="carousel-btn">❯</button>
+    </section>
+
+    <!-- FOOTER -->
+  <footer>
+      <div class="footer_main">
+          <div class="tag">
+              <img src="image/logo.png" alt="Logo">
+              <p>About Us</p>
+          </div>
+
+          <div class="tag">
+              <h1>Quick Link</h1>
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Featured</a>
+              <a href="#">Arrivals</a>
+              <a href="#">Reviews</a>
+              <a href="#">Blog</a>
+          </div>
+
+          <div class="tag">
+              <h1>Contact Info</h1>
+              <a href="#"><i class="fa-solid fa-phone"></i> +971 50 123 4567</a>
+              <a href="#"><i class="fa-solid fa-phone"></i> +971 55 789 1234</a>
+              <a href="#"><i class="fa-solid fa-envelope"></i> bookstore123@gmail.com</a>
+          </div>
+
+          <div class="tag">
+              <h1>Follow Us</h1>
+              <div class="social_link">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+          </div>
+
+          <div class="tag">
+              <h1>Newsletter</h1>
+              <div class="search_bar">
+                  <input type="text" placeholder="Your email address here">
+                  <button type="submit">Subscribe</button>
+              </div>
+          </div>
+      </div>
+      <p class="end">Design By <span>Shaima, Latifa, Shatha, Anam</span></p>
+  </footer>
+
+</body>
+</html>
