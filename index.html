@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookstore Wishlist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#" id="home-link">Home</a></li>
+      <li><a href="#" id="library-link">WishList</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Home / Wishlist Section -->
+    <section id="home-section">
+      <h1>My Wishlist</h1>
+
+      <section id="custom-book">
+        <form id="add-book-form">
+          <label for="book-name">Add Book to Wishlist:</label><br>
+          <input type="text" id="book-name" name="book-name" placeholder="Enter Book Title"><br><br>
+          <input type="submit" value="Add to Wishlist">
+        </form>
+      </section>
+
+      <section id="wishlist">
+        <h2>Your Wishlist</h2>
+        <ul id="wishlist-items"></ul>
+      </section>
+    </section>
+
+    <!-- Library Section -->
+    <section id="library-section" style="display: none;">
+      <h1>Wishlist</h1>
+      <section id="library-books">
+        <ul id="library-list"></ul>
+      </section>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
